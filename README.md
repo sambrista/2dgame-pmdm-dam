@@ -1,1 +1,1 @@
-# 2dgame-pmdm-dam
+# Ejemplo de juego 2D para el módulo de Programación Multimedia y Dispositivos Móviles de 2º de DAM
