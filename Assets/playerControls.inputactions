@@ -115,6 +115,17 @@
                 },
                 {
                     "name": "",
+                    "id": "12a46954-5af4-4662-8f98-699914c3e4d7",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3098b351-4a78-47c9-b204-7462f21009a1",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
@@ -139,6 +150,39 @@
                     "name": "",
                     "id": "7778e18f-e51a-4aeb-b6c2-05a1fe6ed395",
                     "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a03a1a2f-affc-4004-b3e5-13d24c8b8d34",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "80e56fd0-6d8a-41be-9d29-30bc8106cda0",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3c270ba0-4349-4153-b7db-1aad2c9e5f49",
+                    "path": "<Gamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
