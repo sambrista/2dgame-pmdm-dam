@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4605748356822403042}
   - component: {fileID: 4504176915108898226}
   m_Layer: 0
-  m_Name: Gem
+  m_Name: GreenGem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441423dae7dd0ec4bba6433ee7ed1a81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worth: 1
 --- !u!58 &4504176915108898226
 CircleCollider2D:
   m_ObjectHideFlags: 0
