@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -8,14 +7,14 @@ public class Enemy : MonoBehaviour
     [Header("Patrolling")]
     public GameObject patrolLeftPoint;
     public GameObject patrolRightPoint;
-    public float patrolSpeed;
+    public float patrolSpeed = 2f;
     private Rigidbody2D rb;
     private Transform patrolTargetPoint;
     // Start is called before the first frame update
     void Start()
     {
         patrolTargetPoint = patrolRightPoint.transform;
-        patrolSpeed = 3f;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -27,12 +26,11 @@ public class Enemy : MonoBehaviour
         } else {
             rb.velocity = new Vector2(-patrolSpeed, 0);
         }
-
         if (Vector2.Distance(transform.position, patrolTargetPoint.position) < 0.5f) {
                 if (patrolTargetPoint == patrolRightPoint.transform) {
-                    patrolTargetPoint = patrolRightPoint.transform;
-                } else {
                     patrolTargetPoint = patrolLeftPoint.transform;
+                } else {
+                    patrolTargetPoint = patrolRightPoint.transform;
                 }
         }
     }

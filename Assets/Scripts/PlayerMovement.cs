@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 		if (isGrounded()) {
             if (context.performed) {
                 rb.velocity=new Vector2(rb.velocity.x, jumpPower);
+                SoundEffectManager.playJumpSound();
                 animator.SetTrigger("jump");
             }
 		}
