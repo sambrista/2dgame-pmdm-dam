@@ -7,6 +7,7 @@ public class MusicManager : MonoBehaviour
     private static MusicManager Instance;
     private AudioSource audioSource;
     public AudioClip backgroundMusic;
+    public AudioClip startMusic;
     private void Awake() {
         if (Instance == null) {
             Instance = this;
@@ -19,13 +20,19 @@ public class MusicManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (backgroundMusic != null) {
-            Instance.audioSource.clip = backgroundMusic;
-            PlayBackgroundMusic();
+        if (Instance.startMusic != null) {
+            PlayStartMusic();
         }
     }
 
     public static void PlayBackgroundMusic() {
+        Instance.audioSource.Stop();
+        Instance.audioSource.clip = Instance.backgroundMusic;
+        Instance.audioSource.Play();
+    }
+    public static void PlayStartMusic() {
+        Instance.audioSource.Stop();
+        Instance.audioSource.clip = Instance.startMusic;
         Instance.audioSource.Play();
     }
     public static void PauseBackgroundMusic() {
