@@ -15,6 +15,9 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        Debug.Log("Start");
+        Debug.Log(gameOverScreen);
         pointsToFinish = 0;
         gems = GameObject.FindGameObjectsWithTag("Gem");
         foreach (GameObject gem in gems) {
@@ -26,6 +29,7 @@ public class GameController : MonoBehaviour
     }
 
     void IncreasePointsEarned(int amount) {
+        Debug.Log(gameOverScreen);
         pointsEarned += amount;
         if (pointsEarned == pointsToFinish) {
             SoundEffectManager.playGameWinSound();
@@ -36,6 +40,7 @@ public class GameController : MonoBehaviour
     }
     
     void FinishGame() {
+        Debug.Log(gameOverScreen);
         SoundEffectManager.playGameLostSound();
         scoreText.text = "Score: " + pointsEarned + " / " + pointsToFinish;
         gameResultText.text = "YOU LOST!";
@@ -48,8 +53,9 @@ public class GameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnDestroy()
     {
-        
+        Gem.OnGemCollect -= IncreasePointsEarned;
+        PlayerHealth.OnPlayerDied -= FinishGame;
     }
 }
